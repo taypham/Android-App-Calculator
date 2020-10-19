@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="20dp"/>
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="349dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/tvResult"
+        android:textAlignment="textEnd"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="357dp"
+        android:layout_height="457dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tableRow6"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/buttonC"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:onClick="onClick"
+                android:tag="buttonC"
+                android:text="C"
+                android:textSize="36sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonNegative"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:onClick="onClick"
+                android:tag="buttonNegative"
+                android:text="+/-"
+                android:textSize="36sp"
+                app:layout_constraintStart_toEndOf="@+id/buttonC"
+                app:layout_constraintTop_toTopOf="@+id/buttonDelete" />
+
+            <Button
+                android:id="@+id/buttonDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:onClick="onClick"
+                android:tag="buttonDelete"
+                android:text="Del"
+                android:textSize="36sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/buttonNegative"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/buttonDivide"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:onClick="onClick"
+                android:tag="opDivide"
+                android:text="/"
+                android:textSize="36sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/buttonDelete"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tableRow5"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+            <Button
+                android:id="@+id/buttonNine"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:onClick="onClick"
+                android:tag="button9"
+                android:text="9"
+                android:textSize="36sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonEight"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_marginBottom="3dp"
+                android:onClick="onClick"
+                android:tag="button8"
+                android:text="8"
+                android:textSize="36sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/buttonNine"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/buttonSeven"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:onClick="onClick"
+                android:tag="button7"
+                android:text="7"
+                android:textSize="36sp"
+                app:layout_constraintStart_toEndOf="@+id/buttonEight"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonMutip"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:onClick="onClick"
+                android:tag="opMutip"
+                android:text="*"
+                android:textSize="36sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/buttonSeven"
+                app:layout_constraintStart_toEndOf="@+id/buttonSeven" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp">
+
+            <Button
+                android:id="@+id/buttonFour"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:onClick="onClick"
+                android:tag="button4"
+                android:text="4"
+                android:textSize="36sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonFive"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:onClick="onClick"
+                android:tag="button5"
+                android:text="5"
+                android:textSize="36sp"
+                app:layout_constraintStart_toEndOf="@+id/buttonFour"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonSix"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:onClick="onClick"
+                android:tag="button6"
+                android:text="6"
+                android:textSize="36sp"
+                app:layout_constraintStart_toEndOf="@+id/buttonFive"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonMinus"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:onClick="onClick"
+                android:tag="opMinus"
+                android:text="-"
+                android:textSize="36sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/buttonSix"
+                app:layout_constraintStart_toEndOf="@+id/buttonSix" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tableRow3"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+            <Button
+                android:id="@+id/buttonOne"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:onClick="onClick"
+                android:tag="button1"
+                android:text="1"
+                android:textSize="36sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/buttonTwo"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/buttonTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:onClick="onClick"
+                android:tag="button2"
+                android:text="2"
+                android:textSize="36sp"
+                app:layout_constraintStart_toEndOf="@+id/buttonOne" />
+
+            <Button
+                android:id="@+id/buttonThree"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:onClick="onClick"
+                android:tag="button3"
+                android:text="3"
+                android:textSize="36sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/buttonTwo"
+                app:layout_constraintStart_toEndOf="@+id/buttonTwo" />
+
+            <Button
+                android:id="@+id/buttonPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:onClick="onClick"
+                android:tag="opPlus"
+                android:text="+"
+                android:textSize="36sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/buttonThree"
+                app:layout_constraintStart_toEndOf="@+id/buttonThree" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+            <Button
+                android:id="@+id/buttonZero"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:onClick="onClick"
+                android:tag="button0"
+                android:text="0"
+                android:textSize="36sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/buttonDecimal"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/buttonDecimal"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:onClick="onClick"
+                android:tag="buttonDecimal"
+                android:text="."
+                android:textSize="36sp"
+                app:layout_constraintStart_toEndOf="@+id/buttonZero" />
+
+            <Button
+                android:id="@+id/buttonResult"
+                android:layout_width="175dp"
+                android:layout_height="90dp"
+                android:onClick="onClick"
+                android:tag="buttonResult"
+                android:text="="
+                android:textSize="36sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/buttonDecimal"
+                app:layout_constraintStart_toEndOf="@+id/buttonDecimal" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
